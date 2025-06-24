@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Portal Semicircle Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #f1eef0, #f8f7f7);
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .menu-container {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #150bd5;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .menu-items {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .menu-item {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      color: #150bd5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      transform: scale(0);
+      transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease;
+    }
+
+    .menu-container.active .menu-item {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-container" id="menu">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-plus"></i>
+    </div>
+    <div class="menu-items" id="menuItems">
+      <a class="menu-item" href="https://www.facebook.com/MHACyberDost" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a class="menu-item" href="https://twitter.com/Cyberdost" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a class="menu-item" href="https://www.instagram.com/cyberdostmha/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a class="menu-item" href="https://www.youtube.com/@CyberDostMHA" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a class="menu-item" href="mailto:cybercrime.gov.in@gov.in"><i class="fas fa-envelope"></i></a>
+      <a class="menu-item" href="tel:1930"><i class="fas fa-phone-alt"></i></a>
+    </div>
+  </div>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const items = document.querySelectorAll(".menu-item");
+
+    function toggleMenu() {
+      menu.classList.toggle("active");
+
+      const radius = 120; // distance from toggle
+      const angleStep = Math.PI / (items.length - 1); // divide semicircle
+      const startAngle = -Math.PI / 2; // start from top
+
+      items.forEach((item, index) => {
+        if (menu.classList.contains("active")) {
+          const angle = startAngle + angleStep * index;
+          const x = radius * Math.cos(angle); // right
+          const y = radius * Math.sin(angle); // down
+          item.style.left = `${x + 25}px`; // offset from toggle center
+          item.style.top = `${y + 25}px`;
+        } else {
+          item.style.left = `0px`;
+          item.style.top = `0px`;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
