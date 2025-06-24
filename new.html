@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Crime Portal - Redesigned</title>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <img src="emb.jpeg" alt="Emblem" class="logo">
+    <h1>National Cyber Crime Reporting Portal</h1>
+    <h3>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</h3>
+<button id="themeToggle" class="theme-toggle">🌙</button>
+
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Register Complaint</a>
+    <a href="#">Report & Track</a>
+    <a href="#">Suspect Check</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- COMPLAINT TYPES -->
+  <section class="cards">
+    <div class="card">
+      <img src="women.jpg" alt="">
+      <h4>Women/Children Crime</h4>
+      <button>Register Anonymously</button>
+      <button>Register & Track</button>
+    </div>
+    <div class="card">
+      <img src="finance.jpg" alt="">
+      <h4>Financial Fraud</h4>
+      <button>Register Complaint</button>
+    </div>
+    <div class="card">
+      <img src="other.jpg" alt="">
+      <h4>Other Cyber Crime</h4>
+      <button>Register Complaint</button>
+    </div>
+  </section>
+
+  <!-- WHATS NEW -->
+  <section class="whats-new">
+    <h3>What's New</h3>
+    <marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+      <p><strong>NEW:</strong> RTI Public Notice <a href="emb.jpeg" target="_blank">Read</a></p>
+      <p>CyberGuard AI Hackathon is live! <a href="https://indiaai.gov.in" target="_blank">Details</a></p>
+      <p>Search cyber criminal data at: <a href="https://cybercrime.gov.in/Webform/suspect_search_repository.aspx">Suspect Repository</a></p>
+    </marquee>
+  </section>
+  <section class="learning-corner">
+  <h2>📘 Learning Corner</h2>
+
+  <div class="learning-cards">
+    <div class="lcard">
+      <img src="images/manual.png" alt="Manual">
+      <h3>CITIZEN MANUAL</h3>
+      <p>It is a document to describe the functionalities and workflow that is provided to citizens on the cybercrime portal for reporting cybercrimes.</p>
+      <a href="#">Read More ➜</a>
+    </div>
+
+    <div class="lcard">
+      <img src="images/safety.png" alt="Safety">
+      <h3>CYBER SAFETY TIPS</h3>
+      <p>To stay safe in the online world, follow important cyber safety practices to protect ourselves and our families from imminent threats.</p>
+      <a href="#">Read More ➜</a>
+    </div>
+
+    <div class="lcard">
+      <img src="images/awareness.png" alt="Awareness">
+      <h3>CYBER AWARENESS</h3>
+      <p>Cyber awareness is an ongoing process of educating citizens and employees about threats in cyberspace and how to act responsibly.</p>
+      <a href="#">Read More ➜</a>
+    </div>
+
+    <div class="lcard">
+      <img src="images/digest.png" alt="Digest">
+      <h3>DAILY DIGEST</h3>
+      <p>Comprehensive document prepared by I4C to spread awareness about cyber fraud modus operandi to employees and citizens.</p>
+      <a href="#">Read More ➜</a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- 🎥 Video Gallery Section -->
+<section class="gallery">
+  <h2>🎥 Video Gallery</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- 🔁 Repeat this for up to 20 videos -->
+      <div class="swiper-slide">
+        <video src="1.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="2.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="3.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="4.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="5.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="7.mp4" controls></video>
+      </div>
+      <div class="swiper-slide">
+        <video src="8.mp4" controls></video>
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+  <section class="logo-marquee">
+  <h2>🔗 Useful Links</h2>
+  <marquee direction="up" scrollamount="2" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">
+    <div class="logo-container">
+      <a href="https://mha.gov.in/" target="_blank">
+        <img src="images/mha.png" alt="MHA">
+      </a>
+      <a href="https://digitalindia.gov.in/" target="_blank">
+        <img src="images/digital-india.png" alt="Digital India">
+      </a>
+      <a href="https://cybercrime.gov.in/" target="_blank">
+        <img src="images/cybercrime.png" alt="Cyber Crime">
+      </a>
+      <a href="https://www.india.gov.in/" target="_blank">
+        <img src="images/india-gov.png" alt="India Gov">
+      </a>
+      <a href="https://ncpcr.gov.in/" target="_blank">
+        <img src="images/ncpcr.png" alt="NCPCR">
+      </a>
+    </div>
+  </marquee>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Website managed by Ministry of Home Affairs | © 2025</p>
+  </footer>
+  <script>const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  // Optional: change icon
+  if (document.body.classList.contains("dark")) {
+    toggleBtn.textContent = "☀️"; // Light icon
+  } else {
+    toggleBtn.textContent = "🌙"; // Dark icon
+  }
+});
+</script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1, // You can show 2 or 3 based on screen
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+
+</body>
+</html>

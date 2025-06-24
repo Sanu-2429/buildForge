@@ -1,608 +1,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta http-equiv="content-type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><meta name="format-detection" content="telephone=no" /><meta name="keywords" content="ministry, department" /><meta name="description" content="Ministry/Department" /><meta name="author" content="National Informatics Center" /><title>
-	Cyber Crime Portal
-</title><meta name="description" /><link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" /><link rel="icon" href="assets/images/favicon/favicon.png" />
-
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" /><link href="css/style_mha.css" rel="stylesheet" /><link rel="stylesheet" href="css/layout/wide.css" data-name="layout" /><link rel="stylesheet" type="text/css" href="css/switcher.css" media="screen" /><link href="assets/css/swiper-bundle.min.css" rel="stylesheet" media="all" /><link href="assets/css/base.css" rel="stylesheet" media="all" /><link href="assets/css/base-responsive.css" rel="stylesheet" media="all" /><link href="assets/css/grid.css" rel="stylesheet" media="all" /><link href="assets/css/font.css" rel="stylesheet" media="all" /><link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all" /><link href="assets/css/flexslider.css" rel="stylesheet" media="all" /><link href="assets/css/megamenu.css" rel="stylesheet" media="all" /><link href="assets/css/print.css" rel="stylesheet" media="print" />
-    <!-- Theme styles for this template -->
-    <link href="assets/css/megamenu.css" rel="stylesheet" media="all" /><link href="assets/css/all.min.css" rel="stylesheet" media="all" /><link href="theme/css/site.css" rel="stylesheet" media="all" /><link href="theme/css/site-responsive.css" rel="stylesheet" media="all" /><link href="theme/css/ma5gallery.css" rel="stylesheet" type="text/css" /><link href="theme/css/print.css" rel="stylesheet" type="text/css" media="print" />
-    <script src="assets/js/jquery-3.7.1.min.js">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-    </script>
-    
-    
-
-    
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-
-        .navbar {
-            height: 150px;
-            /*padding: 0 15px;*/
-            position: fixed;
-            z-index: 1;
-            padding: 0px;
-            top: 0;
-            width: 100%;
-            border-radius: 0px;
-            display: unset;
-        }
-
-        .shows {
-            display: none;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: rgb(0 0 0 / 92%);
-            top: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 1050;
-            overflow-x: hidden;
-        }
-
-            .shows .overlay {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                z-index: 1050;
-                margin-bottom: 56px;
-            }
-
-
-
-            .shows .img-shows {
-                width: 70%;
-                height: 100%;
-                background: #FFF;
-                position: absolute;
-                top: 3%;
-                left: 15%;
-                bottom: 10%;
-                transform: translate(0,0);
-                overflow: hidden;
-                z-index: 1050;
-            }
-
-        .img-shows span {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 99;
-            cursor: pointer;
-        }
-        /*.main {
-            margin-top: 138px;*/
-        /* Used in this example to enable scrolling */
-        /*}*/
-
-        a {
-            color: #428bca;
-            text-decoration: none;
-        }
-
-        ol, ul {
-            padding-left: 0rem;
-        }
-
-        [class*="span"] img, [class*="span"] iframe {
-            max-width: 59%;
-        }
-
-        .block {
-            padding-bottom: 0px;
-        }
-
-
-        .imgfix {
-            height: 63px;
-        }
-
-
-        .pb-35 {
-            padding-bottom: 15px;
-        }
-
-        .pr-20 {
-            padding-right: 20px;
-        }
-
-        .pl-20 {
-            padding-left: 20px;
-        }
-
-        .pb-50 {
-            padding-bottom: 20px;
-        }
-
-        .pt-50 {
-            padding-top: 20px;
-        }
-
-
-        .modal-dialog {
-            position: relative;
-            width: 475px;
-            margin: 0 auto;
-        }
-
-        .modal a.close-modal {
-            display: none !important;
-        }
-
-        button.close {
-            -webkit-appearance: none !important;
-            padding: 0 !important;
-            cursor: pointer !important;
-            background: 0 0 !important;
-            border: 0 !important;
-        }
-
-        .close {
-            float: right;
-            font-size: 21px;
-            font-weight: 700;
-            line-height: 1;
-            color: #000;
-            text-shadow: 0 1px 0 #fff;
-            filter: alpha(opacity=20);
-            opacity: .2;
-        }
-
-        .dropdown-content {
-            display: none !important;
-            overflow: hidden;
-            position: absolute;
-            background: #002654;
-            color: #fff !important;
-            left: 275px;
-            top: -15px;
-            width: 100%;
-            z-index: 1;
-            padding: 10px !important;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block !important;
-        }
-
-        .dropdown-content li a {
-            font-size: 14px;
-            cursor: pointer;
-            text-transform: uppercase;
-            display: block;
-        }
-
-        .dropdown {
-            display: block;
-        }
-
-        .timeline-label h3 {
-            font-size: 15px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            font-weight: 700;
-            clear: both;
-            margin-bottom: 5px;
-        }
-
-        .submenutop {
-            display: none !important;
-            overflow: hidden;
-            position: absolute;
-            background: #002654;
-            color: #fff !important;
-            left: 275px;
-            top: -9px;
-            width: 100%;
-            z-index: 1;
-            padding: 10px !important;
-        }
-
-        .dropdown:hover .submenutop {
-            display: block !important;
-        }
-
-        .top_bx img {
-            height: 220px;
-            width: 100%;
-        }
-
-        .slides > li {
-            text-align: center;
-        }
-
-
-        .top_bx img {
-            height: 220px;
-            width: 100%;
-        }
-
-        .slides > li {
-            text-align: center;
-        }
-
-        .btn-info {
-            color: #000 !important;
-        }
-
-        .top_bx p {
-            margin: 10px 0px;
-        }
-
-        .logo {
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif !important;
-        }
-
-        .footer-top-wrapper ul li a {
-            padding: 0px 10px;
-        }
-
-        marquee {
-            color: #000;
-        }
-
-            marquee:hover {
-                color: #3f51b5;
-            }
-
-        .medigalry .card-body {
-            height: 270px;
-            overflow: hidden;
-            margin-bottom: 16px;
-        }
-
-        iframe {
-            width: 100%;
-        }
-
-        @media (min-width: 1400px) {
-            .container {
-                width: 1320px;
-            }
-        }
-
-        .fa-youtube-square:before {
-            content: "\f431"!important;
-        }
-
-        footer .testimonial-item {
-            height: 84px;
-        }
-
-        .gallery-slider .swiper-slide {
-            height: 240px;
-        }
-
-        .swiper {
-            padding: 1px;
-        }
-
-        .gallery-slider .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-            bottom: 53px;
-        }
-
-        .row {
-            margin: 0px!important;
-        }
-
-        video {
-            width: 100%;
-            height: 78%;
-        }
-            .videonothight{height: 92%!important;}
-
-        .whstanewCont span {
-            text-transform: uppercase;
-            color: #fff;
-            position: relative;
-            font-size: 10px;
-            font-weight: bold;
-            background-color: #E91E63;
-            line-height: 1em;
-            padding: 3.5px 5.5px;
-            display: inline-block;
-        }
-
-            .whstanewCont span::after {
-                content: "";
-                width: 8px;
-                height: 4px;
-                background-color: #E91E63;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                clip-path: polygon(100% 0, 0 0, 100% 100%);
-            }
-
-        .blink-soft {
-            animation: blinker 1s step-end infinite;
-        }
-
-        @keyframes blinker {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        .whstanewCont a {
-            cursor: pointer;
-            color: #0666b3;
-        }
-
-            .whstanewCont a:hover {
-                color: #3f51b5;
-            }
-    </style>
-
-    <script type="text/javascript">
-        window.oncontextmenu = function () {
-            return false;
-        }
-
-        $(document).keydown(function (event) {
-            if (event.keyCode == 123) {
-                return false;
-            }
-            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-                return false;
-            }
-        });
-    </script>
-   
-
-    <script type="text/javascript" language="javascript">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        $(document).ready(function () {
-            $(this).bind("contextmenu", function (e) {
-                e.preventDefault();
-            });
-            $(document).keydown(function (e) {
-                return (e.which || e.keyCode) != 116;
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        document.addEventListener('play', function (e) {
-            var audios = document.getElementsByTagName('audio');
-            for (var i = 0, len = audios.length; i < len; i++) {
-                if (audios[i] != e.target) {
-                    this.currentTime = 0;
-                    audios[i].pause();
-                }
-            }
-        }, true);
-        function NewTab() {
-
-            window.document.forms[0].target = "_blank";
-            setTimeout(function () { window.document.forms[0].target = ''; }, 0);
-        }
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#hide").click(function () {
-                $("#popupmodal").hide();
-
-            });
-
-        });
-    </script>
-
-
-
-
+<head><title>Cyber Crime Portal</title>
 </head>
 <body>
-    
-    <div class="container">
-        <div class="row">
-            <div id="log"></div>
-            <!------ Pop-up Modal-Begin ---------->
-
-            <div class="modal fade" id="popupmodal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title" style="color: white"></h4>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <!-- <div class="modal-footer"> -->
-                        <!-- </div> -->
-                    </div>
-
-                </div>
-            </div>
-
-            <!------ Pop-up Modal-End ---------->
-            <div id="logToSave"></div>
-            
-        </div>
-    </div>
-
-    
-
-    <form method="post" action="./" id="form1">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="TR9VSiBwQZEERXyhFeuq4f/VZ3Xn4a+DFr3nFVZqOufuQCKnm+xep6y/2dDMmDgNJ5eImvaEF3S0jnH92SsRGsZ6cLhQXnxa1ITjTwa7kFmZEtZlBoHMNYZTXrbSBFNFTBV4DA==" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHJF5iTS9lLqkJxlS-5l1HCy5Q1ie6pkNNMbXOn-XkbMI36Yyw2&amp;t=638628422640000000" type="text/javascript"></script>
-
-
-<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmZuTDuORTYsjJoK_r2hNdtkbTcqOkzwVCRoH1gCCdxyA3JVEUuZwGdPGGIsg3N9fHXchIjMLcv0HV8LSSLh1bBawZe0c7QLgSGcr1l1mlZdQoB565TLiVeQ3HQPmtBC70GYLVA1&amp;t=2a9d95e3" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OItLa6AmJXNHyrkXVZCPDqTA5RkKHu0UUKPhez-vH3BvDPn7LCMZpfwjma9TkSZm6bMFCTo7rWVH7XVbJXnDYA53gMudbrOKHGmGr4h3xnQGfazh_bX80kIo9vJ39MKAsKoUtVM1&amp;t=2a9d95e3" type="text/javascript"></script>
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="h6jrWlLhXDpcDVvut+J00rxkTfyoVu8y8WnwfEBjpqNSG0fLjx/Mbc30gw1wPG+uAMX60kDFAZq7JD8FZc2ORM1/AlFHYuwoitcV+PLJ4m975cfhchzoNkG6hYkY+wDI0mZL9h8JqtGfBpvjw2mtoluKgm6gMD+eqCRWB/O0YM43+SFtOVPnQMbRzwZbFfe4I6sqOgMW6D5/LimIINGznnkvbTDi8iGvSeRYxiL5YwVLFsdEClgt8X+G7TtuQ7YOtCaJzmWSK4QQ9uXF5zmNpE6Geh+NPg8CvlCcom0aj+sOkg8t" />
-</div>
-        <div id="fb-root"></div>
-        <!--Start Header-->
-        <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdatePanel1','UpdatePanel1'], [], [], 90, '');
-//]]>
-</script>
-
-        <!--End Header-->
-        <header id="header" class="clearfix">
-            <section class="navbar">
-                <div class="region region-header-top">
-                    <div id="block-cmf-content-header-region-block" class="block block-cmf-content first last odd">
-
-                        <div class="wrapper common-wrapper">
-                            <div class="container four_content top-header">
-                                <div class="common-left clearfix">
-                                    <ul>
-                                        <li class="gov-india"><span class="responsive_go_hindi" style="color: white;" lang="hi">
-                                            
-                                            भारत सरकार
-                                        </span><span class="li_eng responsive_go_eng" style="color: white;">
-                                            
-                                                Government of india
-                                        </span></li>
-                                        <li class="ministry">
-                                            <a rel="noopener noreferrer" href="https://mha.gov.in/hi" target="_blank" alt="Ministry Name" title="गृह मंत्रालय"><span class="responsive_minis_hi" lang="hi">गृह मंत्रालय</span></a>
-                                            <a rel="noopener noreferrer" href="https://mha.gov.in" target="_blank" alt="Ministry Name" title="Ministry of Home Affairs"><span class="li_eng responsive_minis_eng">Ministry of Home Affairs</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="common-right clearfix">
-                                    <ul id="header-nav">
-                                        <li class="hindi cmf_lan d-hide">
-                                            <a rel="noopener noreferrer" href="#" class="de-lag" title="Language" role="link"><b>Language</b></a>
-                                            <ul>
-                                                <li><a rel="noopener noreferrer" href="Hindi/Defaulthn.aspx" class="cmf_lan" title="हिन्दी" role="link"><b>हिन्दी</b></a> </li>
-                                                <li><a rel="noopener noreferrer" href="Default.aspx" class="cmf_lan" title="English" role="link"><b>English</b></a> </li>
-                                            </ul>
-                                        </li>
-                                        <li class="ico-accessibility cf" style="display: none">
-                                            <a rel="noopener noreferrer" href="javascript:void(0);" id="toggleAccessibility" title="Accessibility Dropdown" role="link">
-                                                <img class="top" src="assets/images/ico-accessibility.png" alt="Accessibility Dropdown" />
-                                            </a>
-                                            <ul>
-                                                <li><a rel="noopener noreferrer" href="javascript:void(0);" class="high-contrast dark" title="High Contrast" role="link">A</a> </li>
-                                                <li><a rel="noopener noreferrer" href="javascript:void(0);" class="high-contrast light" title="Normal Contrast" style="display: none;" role="link">A</a> </li>
-                                            </ul>
-                                        </li>
-                                        <li class="ico-social cf">
-                                            <a rel="noopener noreferrer" href="javascript:void(0);" id="toggleSocial" title="Social Medias" style="background: #fff;">
-                                                <img class="top" src="assets/images/icons/colg-icon.png" alt="Social Medias" /></a>
-                                            <ul>
-                                                <li><a rel="noopener noreferrer" href="https://www.twitter.com/CyberDost" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/twitter.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href=" https://www.facebook.com/CyberDostI4C" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/facebook.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://www.youtube.com/c/CyberDostI4C" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/youtube.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://www.instagram.com/CyberDostI4C" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/instagram.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://t.me/cyberdosti4c" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/telegram.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://in.linkedin.com/company/cyberdosti4c" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/linkedin.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://kooapp.com/profile/cyberdosti4c" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/koo.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://sharechat.com/profile/cyberdost?d=n" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/sharechat.png" style="width: 28px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://public.app/user/profile/1ZCQuF5wrRbR9lcsrtcZgsPkYfC2" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/public.png" style="width: 24px;" /></a></li>
-                                                <li><a rel="noopener noreferrer" href="https://whatsapp.com/channel/0029Va3VAOY8fewrOtXqMw1V" target="_blank" onclick="return sitevisit();">
-                                                    <img src="assets/images/icons/whatsapp.png" style="width: 24px;" /></a></li>
-
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <link rel="stylesheet" href="style.css">
                     <p id="scroll" style="display: none;"><span></span></p>
                 </div>
 
-                <!--Top-Header Section end-->
-                <section class="wrapper header-wrapper">
-                    <div class="row">
-                        <div class="container common-container four_content header-container">
-                            <h1 class="logo">
-                                <img class="national_emblem" src="assets/images/emblem-dark.png" alt="national emblem">
-                                <img src="images/i4cpng.png" alt="I4C" class="i4cImg" />
-                                <span class="department-title">
-                                    <em>
-                                        <a class="header__logo" id="logo" style="text-decoration: none; cursor: text;">
-                                            <span>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</span>
+                 
+                                <img class="national_emblem" src="emb.jpeg" alt="national emblem">
+                                <img src="icccc.jpeg" alt="I4C" class="i4cImg" />
+                                          <span><h1><centre>National Cyber Crime Reporting Portal</centre></h1></span>
+                                            <span><h3>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</h3></span>
 
-                                            <span>National Cyber Crime Reporting Portal</span>
-                                        </a>
-                                    </em>
-                                </span>
-                            </h1>
-                            <div class="header-right clearfix">
-                                <div class="right-content clearfix">
-                                    <div class="float-element">
 
-                                        <img src="images/AKAM_logo.jpg" alt="amritmahotsav.nic.in" />
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <!--/.header-wrapper-->
-            <!-- LOGO bar -->
-            <div class="main">
-                
-
-                <section class="wrapper megamenu-wraper ">
-                    <h2 style="display: none;">Megamenu</h2>
-                    <div class="four_content header-nav">
-                        <p class="showhide" id="showhide"><em></em><em></em><em></em></p>
-                        <nav class="main-menu clearfix main-menu1" id="main_menu">
-                            <ul class="nav-menu">
-                                <li><a rel="noopener noreferrer" href="https://static.cybercrime.gov.in/Default.aspx" class="home"><span>Home</span><i class="fa fa-home"></i></a> </li>
+                                        <img src="75Indepeendence.png" alt="amritmahotsav.nic.in" />
+            
+                                <a rel="noopener noreferrer" href="</h3>" class="home"><span>Home</span><i class="fa fa-home"></i></a> 
 
 
                                 <li><a rel="noopener noreferrer" href="https://static.cybercrime.gov.in/Webform/Index.aspx" style="font-size: 14px; font-weight: bold">Register a Complaint</a>
-                                    <div class="sub-nav col-1">
-                                        <ul class="sub-nav-group ">
-                                            <li class="dropdown"><a rel="noopener noreferrer" href="https://static.cybercrime.gov.in/Webform/Index.aspx" style="font-weight: bold">Women/Children Related Crime
-                                                <span class="indicator">+</span>
-                                            </a>
+                            
+                                            <a rel="noopener noreferrer" href="https://static.cybercrime.gov.in/Webform/Index.aspx" style="font-weight: bold">Women/Children Related Crime
+                                                
                                                 <ul class="submenutop">
                                                     <li>
                                                         <a id="btnra" href="javascript:__doPostBack(&#39;btnra&#39;,&#39;&#39;)" style="font-size: 14px;">Register ANONYMOUSLY</a>
@@ -625,12 +44,6 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-
-                                
-
-                                <li>
-                                    <a id="lnkchkstatus" href="javascript:__doPostBack(&#39;lnkchkstatus&#39;,&#39;&#39;)" style="font-size: 14px; font-weight: bold">Track your Complaint</a>
                                 </li>
 
                                 <li><a rel="noopener noreferrer" href="../Default.aspx" style="font-size: 14px; font-weight: bold">Report & Check Suspect</a>
@@ -740,7 +153,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                 </section>
             </div>
         </header>
-        <!--End Header-->
+        
         
         <section class="wrapper banner-wrapper mobileView">
             <div id="flexSlider" class="flexslider slider">
@@ -848,7 +261,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
 
                                                 <marquee width="100%" direction="up" height="100%" scrolldelay="100" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" style="font-size: 14px; text-align: justify;">
                                                 
-                                                     <a rel="noopener noreferrer" href="UploadMedia/PublicNotice.pdf" target="_blank"><span class="blink-soft">NEW</span>  Public Notice regarding RTI</a>
+                                                     <a rel="noopener noreferrer" href="emb.jpeg" target="_blank"><span class="blink-soft">NEW</span>  Public Notice regarding RTI</a>
                                                       <br/> <br/>
 
                                                     <a rel="noopener noreferrer" href="https://indiaai.gov.in/article/ai-for-citizen-safety-join-the-indiaai-cyberguard-ai-hackathon" target="_blank"> I4C and IndiaAI invite innovators,
@@ -1203,22 +616,6 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                                 </div>
                                             </div>
                                         </div>
-
-                                        
-
-                                        
-
-                                        
-
-
-                                        
-
-                                        
-
-                                        
-
-                                        
-
                                         <div class="swiper-slide">
                                             <div class="testimonial-item">
                                                 <div class="card shadow h-100 w-100 text-center">
@@ -1256,25 +653,14 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                            </div>
                                       <div class="swiper-pagination"></div>
                                     </div>
-                                  
-                                    
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
                 <span id="lbldate"></span>
-                
-                
-            
-</div>
-
-
+            </div>
         <!--start footer-->
         <footer class="footer" style="padding: 10px 0 !important;">
 
@@ -1405,24 +791,11 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                     </div>
                 </div>
             </div>
-
-
-
-
-            <script type="text/javascript">
-                function sitevisit() {
-                    if (!confirm('This is external link, Are you sure you want to continue? \n यह बाहरी लिंक है, क्या आप जारी रखना चाहते हैं?'))
-                        return false;
-                }
-            </script>
         </footer>
-
         <div style="position: relative;">
             <div class="footer-top-wrapper">
                 <div class="container footer-top-container text-start">
-                    <ul class="menu">
-
-
+                    <ul class="menu"></ul>
                         <li><a rel="noopener noreferrer" href="Webform/Crime_Feedback.aspx" target="_blank">Feedback</a></li>
                         <li><a rel="noopener noreferrer" href="https://static.cybercrime.gov.in/Webform/FAQ.aspx" target="_blank">FAQ</a></li>
                         <li><a rel="noopener noreferrer" href="Webform/Crime_NodalGrivanceList.aspx" target="_blank">Contact Us</a></li>
@@ -1449,12 +822,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                         <li><a rel="noopener noreferrer" href="https://public.app/user/profile/1ZCQuF5wrRbR9lcsrtcZgsPkYfC2" target="_blank" onclick="return sitevisit();">
                             <img src="assets/images/icons/public.png" style="width: 24px;" /></a></li>
                         <li><a rel="noopener noreferrer" href="https://whatsapp.com/channel/0029Va3VAOY8fewrOtXqMw1V" target="_blank" onclick="return sitevisit();">
-                            <img src="assets/images/icons/whatsapp.png" style="width: 24px;" /></a></li>
-
-
-
-
-                        
+                            <img src="assets/images/icons/whatsapp.png" style="width: 24px;" /></a></li> 
                     </ul>
                 </div>
             </div>
@@ -1493,163 +861,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                     <img src="">
                 </div>
             </div>
-        </div>
-
-        <!--end footer-->
-        
-        <script src="js/bootstrap.bundle.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/retina-1.1.0.min.js"></script>
-        <script type="text/javascript" src="js/jquery.cookie.js"></script>
-        <!-- jQuery cookie -->
-
-        
+        </div>        
     </form>
-
-
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
-    <script src="assets/js/framework.js"></script>
-    <script src="assets/js/jquery.flexslider.js"></script>
-    <script src="assets/js/font-size.js"></script>
-    <script src="assets/js/swithcer.js"></script>
-    <script src="theme/js/ma5gallery.js"></script>
-    <script src="assets/js/megamenu.js"></script>
-    <script src="theme/js/easyResponsiveTabs.js"></script>
-    <script src="theme/js/custom.js"></script>
-
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <script>
-        new Swiper('.testimonials-slider', {
-            speed: 600,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false
-            },
-            slidesPerView: 'auto',
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-
-                1200: {
-                    slidesPerView: 6,
-                    spaceBetween: 20
-                }
-            }
-        });
-
-        var swiper = new Swiper('.gallery-slider', {
-            speed: 600,
-            loop: true,
-            watchSlidesProgress: true,
-            autoplay: {
-                delay: 7000,
-                disableOnInteraction: false
-            },
-            slidesPerView: 'auto',
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                769: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-
-                1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 20
-                }
-            }
-        });
-  
-
-        $(".video").on("play", function () {
-     
-            swiper.autoplay.stop();
-        });
-
-        $(".video").on("ended, pause", function () {
-     
-            swiper.autoplay.start();
-        });
-        swiper.on("slideChange", function () {
-            const slide = swiper.slides[swiper.activeIndex]
-            var currentVideo = ($(slide).find('video'));
-            console.log(currentVideo);
-            if (currentVideo.length) {
-                var isPaused = currentVideo[0].paused && currentVideo[0].ended;
-                console.log(isPaused);
-                if (!isPaused) {
-                   // currentVideo.trigger('play');
-                } else {
-                    currentVideo.trigger('pause');
-                }
-            }
-
-        });
-
-    </script>
-
-
-    <script>
-        $(function () {
-
-            $(".popup img").click(function (e) {
-                var $src = $(this).attr("src");
-                $(".shows").show();
-                $(".img-shows img").attr("src", $src);
-                $('body').css('overflow', 'hidden');
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-
-            });
-
-            $("span").click(function (e) {
-                $(".shows").hide();
-                $('body').css('overflow', 'visible');
-
-            });
-        });
-
-
-
-
-    </script>
-
-
-        <script>
-
-        document.addEventListener('play', function (e) {
-            var videos = document.getElementsByTagName('video');
-            for (var i = 0, len = videos.length; i < len; i++) {
-                if (videos[i] != e.target) {
-                    videos[i].pause();
-                }
-            }
-        }, true);
-
-        $("video").on("ended, paused", function () {
-            swiper.autoplay.start();
-        });
-
-    </script>
-
 </body>
 </html>
