@@ -8,39 +8,165 @@ body {
 .header {
   background: #00072D;
   color: white;
+  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 100px;     
+  height: auto;    
+}
+
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-align: center;
-  padding: 20px;
+}
+
+.header-title {
+  font-size: 22px;
+  margin: 10;
+  font-weight: bold;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 22px;
+  color: white;
+  margin: 4px 0;
+}
+
+.header-text h3 {
+  font-size: 16px;
+  color: #ccc;
+  margin: 2px 0;
+}
+
+
+/* ----------------- HAMBURGER MENU START ----------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.text {
+  text-transform: uppercase;
 }
 
 .logo {
-  width: 60px;
-  vertical-align: middle;
+  width: 200px;
 }
 
-.navbar {
-  background: #051650;
-  padding: 10px;
-  text-align: center;
-   animation: slideInDown 0.7s ease-out;
-}
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.nav-btn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 
-
-.navbar a {
+.open-btn {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: 1001;
+  font-size: 26px;
   color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
+
+
+/* NAV CONTAINER */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+/* Layer 1 - White */
+.nav-white {
+  background-color: #fff;
+  width: 60%;
+  max-width: 400px;
+  min-width: 320px;
+  transition: all 0.3s ease-in-out 0.2s;
+}
+
+/* Layer 2 - Dark Blue */
+.nav-darkblue {
+  background-color: #00072d;
+  width: 95%;
+  padding: 40px;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 10;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.list li {
+  margin: 20px 0;
+}
+
+.list li a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+/* ----------------- HAMBURGER MENU END ----------------- */
+
 
 .cards {
   display: flex;
@@ -127,8 +253,8 @@ body {
 /* Theme Toggle Button */
 .theme-toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  right: 20px;
+  top: 40px;
   background: transparent;
   border: none;
   font-size: 24px;
