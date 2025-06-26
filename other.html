@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Cyber Crime Reporting Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000D1A;
+      color: #E0F7FA;
+    }
+
+    header {
+      background-color: #001F3F;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #4FC3F7;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #002b5c;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #BBDEFB;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(10, 25, 47, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+    }
+
+    h2 {
+      color: #81D4FA;
+      text-align: center;
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #033e6b;
+      border-radius: 5px;
+      background-color: #001F3F;
+      color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #0288D1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #0277BD;
+    }
+
+    .summary {
+      background: #003b6f;
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #001A33;
+      color: #90CAF9;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>National Cyber Crime Reporting Portal</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    
+  </nav>
+
+  <div class="container">
+    <!-- Step 1: Form -->
+    <div class="form-step active" id="step1">
+      <h2>Personal Information</h2>
+      <div class="form-group"><label>First Name</label><input type="text" id="firstName"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" id="lastName"></div>
+      <div class="form-group"><label>Date of Birth</label><input type="date" id="dob"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="email"></div>
+      <div class="form-group"><label>Contact Number</label><input type="tel" id="phone"></div>
+      <div class="form-group"><label>Address</label><input type="text" id="address"></div>
+      <div class="form-group"><label>Crime Type</label>
+        <select id="crimeType">
+          <option>Women Crime</option>
+          <option>Finance Crime</option>
+          <option>Other Crime</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Details of Crime</label><textarea id="crimeDetails" rows="4"></textarea></div>
+      <button onclick="goToConfirmation()">Continue</button>
+    </div>
+
+    <!-- Step 2: Confirmation -->
+    <div class="form-step" id="step2">
+      <h2>Confirmation</h2>
+      <div class="summary" id="summaryBox"></div>
+      <button onclick="goBack()">Back</button>
+      <button onclick="goToThankYou()">Confirm</button>
+    </div>
+
+    <!-- Step 3: Thank You -->
+    <div class="form-step" id="step3">
+      <h2>Thank You!</h2>
+      <p>Your report has been received. An email will be sent to confirm your submission.</p>
+      <button onclick="restartForm()">Home</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 National Cyber Crime Reporting Portal | All rights reserved
+  </footer>
+
+  <script>
+    function showStep(step) {
+      document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+      document.getElementById(step).classList.add('active');
+    }
+
+    function goToConfirmation() {
+      // Get values
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const dob = document.getElementById('dob').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const crimeType = document.getElementById('crimeType').value;
+      const crimeDetails = document.getElementById('crimeDetails').value;
+
+      // Display summary
+      const summary = `
+        <strong>Name:</strong> ${firstName} ${lastName}<br>
+        <strong>DOB:</strong> ${dob}<br>
+        <strong>Email:</strong> ${email}<br>
+        <strong>Phone:</strong> ${phone}<br>
+        <strong>Address:</strong> ${address}<br>
+        <strong>Crime Type:</strong> ${crimeType}<br>
+        <strong>Details:</strong> ${crimeDetails}
+      `;
+      document.getElementById('summaryBox').innerHTML = summary;
+
+      showStep('step2');
+    }
+
+    function goToThankYou() {
+      showStep('step3');
+    }
+
+    function goBack() {
+      showStep('step1');
+    }
+
+    function restartForm() {
+      document.querySelectorAll('input, textarea').forEach(input => input.value = '');
+      showStep('step1');
+    }
+  </script>
+
+</body>
+</html>

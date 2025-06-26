@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Repository - Cybercrime Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0a0f1a, #0b1a2d);
+      color: #ffffff;
+      padding-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(20, 30, 50, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00bfff44;
+      max-width: 700px;
+      width: 90%;
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #1e2d45;
+      color: #00bfff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #00bfff;
+      transition: background 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+
+    h1 {
+      color: #00bfff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      color: #cce6ff;
+      font-size: 16px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+      background-color: #1c2c3f;
+      color: #ffffff;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #00bfff;
+      color: #000;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #009acd;
+    }
+
+    .result {
+      margin-top: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #102030;
+      color: #ffffff;
+      display: none;
+    }
+
+    .danger {
+      color: #ff4b5c;
+    }
+
+    .safe {
+      color: #3de68a;
+    }
+
+    @media (max-width: 600px) {
+      .home-button {
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="home-button">🏠 Home</a>
+    <h1>Search Suspect Repository</h1>
+
+    <label for="type">Search By:</label>
+    <select id="type">
+      <option value="mobile">📱 Mobile Number</option>
+      <option value="email">📧 Email Address</option>
+      <option value="upi">💰 UPI ID</option>
+    </select>
+
+    <label for="query">Enter Value:</label>
+    <input type="text" id="query" placeholder="e.g. 9876543210 or name@upi or email@example.com"/>
+
+    <button onclick="searchRepository()">Search</button>
+
+    <div class="result" id="resultBox">
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script>
+    function searchRepository() {
+      const type = document.getElementById('type').value;
+      const query = document.getElementById('query').value.trim();
+      const resultBox = document.getElementById('resultBox');
+      const resultText = document.getElementById('resultText');
+
+      if (!query) {
+        resultText.innerHTML = "❗ Please enter a value.";
+        resultBox.style.display = "block";
+        resultBox.classList.remove('safe', 'danger');
+        return;
+      }
+
+      // Simulated match logic
+      const suspectList = ["fraud@upi", "fakeemail@example.com", "9876543210"];
+      const isSuspect = suspectList.includes(query.toLowerCase());
+
+      if (isSuspect) {
+        resultText.innerHTML = ⚠ <strong>${query}</strong> is flagged in the suspect database. Proceed with caution.;
+        resultBox.classList.add("danger");
+        resultBox.classList.remove("safe");
+      } else {
+        resultText.innerHTML = ✅ <strong>${query}</strong> is not found in the current suspect database.;
+        resultBox.classList.add("safe");
+        resultBox.classList.remove("danger");
+      }
+
+      resultBox.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQs - Cybercrime Reporting Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0a0f1a, #0b1a2d);
+      color: #ffffff;
+      padding: 0 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00bfff;
+      margin-bottom: 30px;
+    }
+
+    .faq {
+      background-color: #162036;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      box-shadow: 0 0 10px #00bfff33;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      padding-right: 20px;
+    }
+
+    .faq-question::after {
+      content: "➕";
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .faq.active .faq-question::after {
+      content: "➖";
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #ccc;
+      padding-left: 10px;
+      margin-top: 8px;
+    }
+
+    .faq.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #1e2d45;
+      color: #00bfff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #00bfff;
+      transition: background 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .faq-question {
+        font-size: 16px;
+      }
+
+      .home-button {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="home-button">🏠 Home</a>
+
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <div class="faq-question">1. What is the National Cybercrime Reporting Portal?</div>
+      <div class="faq-answer">
+        The portal is an initiative by the Government of India to allow citizens to report cybercrimes online, especially related to women and children.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">2. How can I file a cybercrime complaint?</div>
+      <div class="faq-answer">
+        You can file a complaint by selecting the appropriate category, filling in personal and crime details, and submitting relevant evidence.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">3. Can I remain anonymous while filing a complaint?</div>
+      <div class="faq-answer">
+        currently the portal requires basic identity details for official and legal follow-up by the concerned authorities.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">4. What type of cybercrimes can be reported?</div>
+      <div class="faq-answer">
+        Crimes like financial fraud, online harassment, cyberbullying, email scams, social media crimes, and more can be reported.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">5. What happens after I submit my complaint?</div>
+      <div class="faq-answer">
+        Your complaint will be routed to the appropriate law enforcement agency for further investigation and action.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

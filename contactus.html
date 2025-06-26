@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Cybercrime Reporting Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0a0f1a, #0b1a2d);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 80px;
+      min-height: 100vh;
+    }
+
+    .contact-container {
+      background-color: rgba(20, 30, 50, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00bfff44;
+      width: 100%;
+      max-width: 700px;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #aad;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e2d45;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #778899;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #00bfff;
+      color: black;
+      border: none;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0099cc;
+    }
+
+    .home-button {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: #1e2d45;
+      color: #00bfff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #00bfff;
+      transition: background 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+
+    #thankYouMessage {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      color: #00ffcc;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      background-color: #121c2d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00bfff33;
+    }
+
+    .contact-info h3 {
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #ccddee;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 10px;
+        padding: 25px;
+      }
+      .home-button {
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <a href="index.html" class="home-button">🏠 Home</a>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div id="thankYouMessage">🙏 Thank you! We’ll get back to you soon.</div>
+
+    <div class="contact-info">
+      <h3>📍 Government Contact Information</h3>
+      <p><strong>Address:</strong> Ministry of Home Affairs, Government of India, North Block, New Delhi - 110001</p>
+      <p><strong>Helpline (24x7):</strong> 1930</p>
+      <p><strong>Email:</strong> cybercrime-mha@gov.in</p>
+      <p><strong>Website:</strong> <a href="https://cybercrime.gov.in" style="color: #00bfff;" target="_blank">https://cybercrime.gov.in</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("thankYouMessage").style.display = "block";
+      document.getElementById("contactForm").reset();
+    });
+  </script>
+
+</body>
+</html>
