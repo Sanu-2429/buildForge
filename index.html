@@ -33,59 +33,74 @@
         }
 
         .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
-        .logo-section img {
+        .logo-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo {
             height: 60px;
             width: auto;
         }
 
-        .title-section h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 5px;
+        .emblem {
+            height: 60px;
         }
 
-        .title-section h3 {
-            font-size: 16px;
-            font-weight: 400;
-            color: #0066FF;
+        .header-text {
+            text-align: center;
         }
 
-        .nav-menu {
+        .header-text h3 {
+            margin: 4px 0 0;
+            color: #00aaff;
+            font-weight: normal;
+        }
+
+/* NAVBAR */
+        .navbar {
+            margin-top: 10px;
+            background: #001a4d;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 255, 0.2);
             display: flex;
+            justify-content: center;
+        }
+
+        .nav-links {
             list-style: none;
-            gap: 30px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
         }
 
-        .nav-menu a {
-            color: #FFFFFF;
+        .nav-links li a {
+            color: white;
+            font-weight: bold;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            text-transform: uppercase;
+            padding: 10px 18px;
+            border-radius: 25px;
+            background: rgba(0, 123, 255, 0.1);
             transition: all 0.3s ease;
-            position: relative;
         }
 
-        .nav-menu a:hover {
-            color: #0066FF;
-            text-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+        .nav-links li a:hover {
+            background: #00aaff;
+            color: #001a4d;
         }
-
+        
         /* Hero Section with Particles */
         .hero {
             min-height: 100vh;
@@ -480,29 +495,35 @@
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="emb.jpeg" alt="Government of India Emblem" class="national_emblem">
-                <img src="icccc.jpeg" alt="I4C Logo" class="i4c-logo">
-                <div class="title-section">
-                    <h1>National Cyber Crime Reporting Portal</h1>
-                    <h3>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</h3>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#report">Report Crime</a></li>
-                    <li><a href="#suspect">Check Suspect</a></li>
-                    <li><a href="#volunteer">Cyber Volunteers</a></li>
-                    <li><a href="#learning">Learning</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <div class="header-content">
+    <!-- Left: Logos -->
+    <div class="logo-group">
+      <img src="emb.jpeg" alt="Emblem" class="logo emblem" />
+      <img src="icccc.jpeg" alt="ICCC Logo" class="logo iccc-logo" />
+    </div>
+
+    <!-- Center: Headings -->
+    <div class="header-text">
+      <h1>National Cyber Crime Reporting Portal</h1>
+      <h3>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</h3>
+    </div>
+  </div>
+
+  <!-- Oval Navigation Menu Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">REPORT CRIME</a></li>
+      <li><a href="#">CHECK SUSPECT</a></li>
+      <li><a href="#">CYBER VOLUNTEERS</a></li>
+      <li><a href="#">LEARNING</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
